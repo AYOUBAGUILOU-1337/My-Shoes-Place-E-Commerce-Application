@@ -67,6 +67,16 @@ Note: This project uses Glide for image loading and Room for SQLite. An Internet
 
 Replace these with your real screenshots inside a folder called /images.
 
+## 🎬 Demo Video:
+
+
+https://github.com/user-attachments/assets/7af6e9ed-7dce-4642-9662-67a1b0b6d66c
+
+
+
+
+
+
 ## Save & Publish to GitHub (Windows - cmd)
 
 Quick steps to save & push this project to a GitHub repo on Windows using cmd:
