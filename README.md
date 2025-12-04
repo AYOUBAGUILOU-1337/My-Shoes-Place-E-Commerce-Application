@@ -35,8 +35,10 @@ Note: This project uses Glide for image loading and Room for SQLite. An Internet
  
 ## Welcome Screen:
 <img width="189" height="355" alt="image" src="https://github.com/user-attachments/assets/49468d6b-d49b-41dc-97a3-6abc18fb79f8" />
+
 ## Home Page After Login:
 <img width="189" height="355" alt="image" src="https://github.com/user-attachments/assets/bcf69917-0ebf-45c8-9210-d12467de8994" />
+
 ## Product Detail Page:
 <img width="176" height="331" alt="image" src="https://github.com/user-attachments/assets/5d3a4363-94ce-4193-86f2-b6cff4c649a4" />
 ## Cart Page - Multiple Items:
