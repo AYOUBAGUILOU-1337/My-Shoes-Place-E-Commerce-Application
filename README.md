@@ -34,8 +34,7 @@ Note: This project uses Glide for image loading and Room for SQLite. An Internet
 ## 📸 App Screenshots
  
 ## Welcome Screen:
-<img width="189" height="355" alt="image" src="https://github.com/user-attachments/assets/49468d6b-d49b-41dc-97a3-6abc18fb79f8" />
-## Home Page After Login:
+<img width="189" height="355" alt="image" src="https://github.com/user-attachments/assets/49468d6b-d49b-41dc-97a3-6abc18fb79f8" />## Home Page After Login:
 <img width="194" height="364" alt="image" src="https://github.com/user-attachments/assets/cd3f34d4-8e65-4a69-8b37-4c72412f1eeb" />
 
 
