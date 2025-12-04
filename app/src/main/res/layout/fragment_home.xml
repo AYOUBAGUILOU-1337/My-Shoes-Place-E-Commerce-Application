@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:paddingTop="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_profile"
+                android:contentDescription="" />
+
+            <LinearLayout android:orientation="vertical" android:layout_marginStart="8dp">
+                <TextView android:textColor="#AAA" android:text="Hey" />
+                <TextView android:textColor="#FFF" android:textStyle="bold" android:text="Ayoub Aguilou" />
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#222"
+                android:src="@drawable/ic_home" />
+        </LinearLayout>
+
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <LinearLayout android:id="brand_buttons" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                    <Button android:id="@+id/btn_brand_all" android:text="All" android:layout_marginEnd="6dp"/>
+                    <Button android:id="@+id/btn_brand_nike" android:text="Nike" android:layout_marginEnd="6dp"/>
+                    <Button android:id="@+id/btn_brand_adidas" android:text="Adidas" android:layout_marginEnd="6dp"/>
+                    <Button android:id="@+id/btn_brand_puma" android:text="Puma" android:layout_marginEnd="6dp"/>
+                </LinearLayout>
+
+                <TextView android:text="Popular" android:textStyle="bold" android:textColor="#fff" android:layout_marginTop="12dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/products_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbars="vertical"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

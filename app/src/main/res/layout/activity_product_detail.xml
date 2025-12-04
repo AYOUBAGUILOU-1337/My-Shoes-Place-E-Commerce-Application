@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView android:id="@+id/product_image" android:layout_width="match_parent" android:layout_height="200dp" android:scaleType="centerInside" />
+        <TextView android:id="@+id/product_title" android:textColor="#fff" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="12dp"/>
+        <TextView android:id="@+id/product_price" android:textColor="#E11A1A" android:textSize="16sp" android:layout_marginTop="6dp" />
+
+        <TextView android:layout_marginTop="16dp" android:textColor="#AAA" android:text="Description: Contrary to popular belief, Lorem ipsum is not simply random text. Lorem ipsum is not simply." />
+
+        <Button android:id="@+id/btn_add_to_cart" android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Add to Cart" android:backgroundTint="#E11A1A" android:textColor="#fff" />
+
+    </LinearLayout>
+</ScrollView>

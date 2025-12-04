@@ -1,0 +1,32 @@
+# Gradle
+.gradle/
+/build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log files
+*.log
+
+# Android Studio
+/.idea/
+*.iml
+
+# Build output
+**/build/
+
+# Android/IntelliJ
+*.iml
+out/
+
+# Kotlin/JS
+node_modules/
+
+# Exclude 3rd party jar files
+lib/
+
+# Ignore gradle wrappers
+gradle/wrapper/gradle-wrapper.jar
+
+# Studio navigation
+navigation.json
