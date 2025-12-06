@@ -10,9 +10,13 @@ on:
 
 jobs:
   build:
+    name: Build and Test
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
@@ -30,18 +34,16 @@ jobs:
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: build
+          arguments: build --stacktrace --no-daemon
           gradle-version: '8.1'
       - name: Ensure gradlew is executable
         if: runner.os == 'Linux'
         run: |
           if [ -f ./gradlew ]; then chmod +x ./gradlew; fi
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: google-github-actions/setup-android@v2
         with:
-          api-level: 33
-          build-tools: '33.0.2'
-          components: 'platform-tools'
+          sdk: 'platform-tools,platforms;android-33,build-tools;33.0.2'
       - name: Run Gradle wrapper (if exists) or Gradle action fallback
         run: |
           if [ -f ./gradlew ]; then ./gradlew build --no-daemon; else echo "No gradlew found. Using gradle action already invoked earlier to build."; fi
