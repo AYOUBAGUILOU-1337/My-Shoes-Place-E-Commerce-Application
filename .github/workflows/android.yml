@@ -32,3 +32,16 @@ jobs:
         with:
           arguments: build
           gradle-version: '8.1'
+      - name: Ensure gradlew is executable
+        if: runner.os == 'Linux'
+        run: |
+          if [ -f ./gradlew ]; then chmod +x ./gradlew; fi
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 33
+          build-tools: '33.0.2'
+          components: 'platform-tools'
+      - name: Run Gradle wrapper (if exists) or Gradle action fallback
+        run: |
+          if [ -f ./gradlew ]; then ./gradlew build --no-daemon; else echo "No gradlew found. Using gradle action already invoked earlier to build."; fi
